@@ -67,7 +67,7 @@ public:
     //help::run this command when called by the dispatcher
     //The Controller Class is the “commands” you want to have run by the dispatcher.
 public:
-    //What's the use of payload added as parameter by reference if the output is just a simple printf?
+
     bool help(rapidjson::Value &payload)
     {
         cout << "Controller::help: command: ";
@@ -80,7 +80,7 @@ public:
         cout<<help_command<<endl;
         return true;
     }
-   //What's the use of payload
+   //What's the use of payload?
     bool exit(rapidjson::Value &payload)
     {
         cout << "Controller::exit: command: \n";
@@ -110,7 +110,7 @@ public:
     }
 };
 
-// Functors are objects that can be treated as though they are a function or function pointer
+// Functor that can be treated as though they are a function or function pointer
 typedef std::function<bool(rapidjson::Value &)> CommandHandler;
 
 
@@ -190,7 +190,8 @@ private:
     std::map<std::string, CommandHandler> command_handlers_;
 
     // Question: why delete these?
-    //The destructor of A will run when its lifetime is over. If you want its memory to be freed and the destructor run, you have to delete it if it was allocated on the heap.
+    //The destructor of A will run when its lifetime is over.
+    //If you want its memory to be freed and the destructor run, you have to delete it.
 
     // delete unused constructors
     CommandDispatcher (const CommandDispatcher&) = delete;
