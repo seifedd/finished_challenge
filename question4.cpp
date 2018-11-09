@@ -1,7 +1,7 @@
 /*
 Question4:
 //
-Example4/:: An example using my own implementation of lock_guard to protect safe_increment()
+ An example using my own implementation of lock_guard to protect safe_increment()
 Reference: check my lock_guard implementation on lock_guard.h
 
 */
